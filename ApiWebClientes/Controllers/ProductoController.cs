@@ -12,8 +12,29 @@ namespace ApiWebClientes
     
     public class ProductoController : ApiController 
     {
-        
-         public IHttpActionResult GetAllProductos()
+
+        [Route("api/Producto/Names")]
+        public IHttpActionResult GetNamesProductos()
+        {
+            List<LProductoViewModel> productos = new List<LProductoViewModel>();
+
+            using (var ctx = new bdclientesEntities())
+            {
+                productos =
+                ctx.Producto.Select(p => new LProductoViewModel()
+                {
+                    Id = p.Id,
+                    Nombre = p.Nombre
+                }).ToList<LProductoViewModel>();
+
+                if (productos.Count() == 0)
+                    return NotFound();
+
+                return Ok(productos);
+            }
+        }
+
+        public IHttpActionResult GetAllProductos()
         {
             
             System.Diagnostics.Debug.WriteLine("SystraceMethod:GetAllProductoS()");

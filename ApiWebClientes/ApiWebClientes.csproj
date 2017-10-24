@@ -209,6 +209,7 @@
     </Compile>
     <Compile Include="Models\CategoriaViewModel.cs" />
     <Compile Include="Models\ClienteViewModel.cs" />
+    <Compile Include="Models\LProductoViewModel.cs" />
     <Compile Include="Models\ProductoViewModel.cs" />
     <Compile Include="Pedido.cs">
       <DependentUpon>CarniceriaModel.tt</DependentUpon>

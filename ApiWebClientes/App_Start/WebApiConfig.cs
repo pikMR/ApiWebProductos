@@ -20,10 +20,10 @@ namespace ApiWebClientes
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.Routes.MapHttpRoute(
-                name: "GetAllProductos",
-                routeTemplate: "api/{controller}/"
-            );
+            //    config.Routes.MapHttpRoute(
+            //        name: "DefaultAction",
+            //        routeTemplate: "api/{controller}/{action}");
+            //}
         }
     }
 }
