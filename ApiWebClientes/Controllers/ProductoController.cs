@@ -24,7 +24,8 @@ namespace ApiWebClientes
                 ctx.Producto.Select(p => new LProductoViewModel()
                 {
                     Id = p.Id,
-                    Nombre = p.Nombre
+                    Nombre = p.Nombre,
+                    CategoriaPrincipal = p.CategoriaPrincial
                 }).ToList<LProductoViewModel>();
 
                 if (productos.Count() == 0)
