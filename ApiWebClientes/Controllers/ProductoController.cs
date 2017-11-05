@@ -97,7 +97,9 @@ namespace ApiWebClientes
                 {
                     Id = p.Id,
                     Nombre = p.Nombre,
-                    CategoriaPrincipal = p.CategoriaPrincial
+                    CategoriaPrincipal = p.CategoriaPrincial,
+                    Precio = p.Precio,
+                    UnidadesStock = p.UnidadesStock
                 }).Where(d => d.Id == id).FirstOrDefault();
 
                 if (producto==null)
